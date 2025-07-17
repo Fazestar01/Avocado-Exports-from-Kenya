@@ -14,9 +14,13 @@
 
 
 ## Business Requirements
-* The problem statement on Kaggle defines the business requirements. 
-* The problem statement states that we are assuming the role of a consultant for the automotive company Geely Auto.
-* We have been tasked with examining how different factors effect pricing across the US market.
+The avocado industry is growing at a rapid rate with increasing international markets. With that being said, Kenya is amoungst one of the new kids on the block when it comes to being an avocado exporter. 
+
+* This is being carried out by an Agricultual Analyst for the exporting company, Globalwema which is based in both the UK and Kenya. The purpose is to give this company insight on the potential produce they wish to embark on.
+* The requirement is to look into which countries are Kenyas top trading partners. As countries like Mexico and South Africa have been in the running, is vital to know if Kenya is part of the running.
+* In addition, are export volumes and values increasing over time and how is the pricing per tonnne varying across the markets and years. This is worth looking into as although Kenya is now exporting Avocados, does it mean it's a sustanable country in the long run. 
+* In terms of future projective predictions, its worth looking at what is happening now and whether if Kenya can compete with the more seasoned players in the avocado exporting world or if this is a short term matter.
+
 
 
 ## Hypothesis and how to validate?
