@@ -1,7 +1,8 @@
 # Avocado Exports From Kenya Analysis
 ### Data Analyst: [Faiza Abdulqadir](https://github.com/Fazestar01)
 **Avocado Exports from Kenya anaylsis** is a group hackathon project focussed on the ETL (Extract, Transform, Load) pipeline in Jupyter Notebook and visualisations in Tableau. The Project examines car pricing across range of factor to assess the primary drivers behind car prices. 
-# ![Heading picture with title 'Kenyan Avocado Analysis Banner](image.png)
+
+![Kenyan Avocado Analysis Banner](Avocado Export Banner.png)
 
 ## Navigation
 * [Data Investigations](https://github.com/Fazestar01/Avocado-Exports-from-Kenya/blob/main/jupyter_notebooks/kenyan-avocado-investigation.ipynb)
