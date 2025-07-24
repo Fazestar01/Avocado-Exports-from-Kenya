@@ -1,6 +1,6 @@
 # Avocado Exports From Kenya Analysis
 ### Data Analyst: [Faiza Abdulqadir](https://github.com/Fazestar01)
-**Avocado Exports from Kenya anaylsis** is a group hackathon project focussed on the ETL (Extract, Transform, Load) pipeline in Jupyter Notebook and visualisations in Tableau. The Project examines car pricing across range of factor to assess the primary drivers behind car prices. 
+**Avocado Exports from Kenya analysis** is a project focused on the ETL (Extract, Transform, Load) pipeline in Jupyter Notebook and visualisations in Tableau. The project examines Kenya's avocado export patterns, trading relationships, and market dynamics to assess competitiveness in the global avocado industry. 
 
 ![Kenyan Avocado Analysis Banner](Avocado-Export-Banner.png)
 
@@ -8,7 +8,7 @@
 * [Data Investigations](https://github.com/Fazestar01/Avocado-Exports-from-Kenya/blob/main/jupyter_notebooks/kenyan-avocado-investigation.ipynb)
 * [Raw Data](https://github.com/Fazestar01/Avocado-Exports-from-Kenya/blob/main/data/raw/kenyan-avocados-guide-2023.csv)
 * [Cleaned Data](https://github.com/Fazestar01/Avocado-Exports-from-Kenya/blob/main/data/cleaned/cleaned_kenyan_avocados.csv)
-* [Dashboard] NEED TO DO(https://public.tableau.com/app/profile/kaori.ikarashi/viz/CarPriceAnalysis_17501618237170/Story1?publish=yes)
+* [Dashboard](https://public.tableau.com/app/profile/faiza.abdulqadir/viz/Kenyan_Avocado_Analysis/KenyanAvocadoExportsAnalysis?publish=yes)
 
 ## Dataset Content
 * Data was acquried from a dataset on a software that includes several databases from various international organisation [WITS](https://wits.worldbank.org/trade/comtrade/en/country/KEN/year/2023/tradeflow/Exports/partner/ALL/product/080440?utm_source=chatgpt.com#), the data includes avocado export information from 2023 from Kenya showing weight, quantity and trade value.
@@ -18,93 +18,155 @@
 The avocado industry is growing at a rapid rate with increasing international markets. With that being said, Kenya is amoungst one of the new kids on the block when it comes to being an avocado exporter. 
 
 * This is being carried out by an Agricultual Analyst for the exporting company, Globalwema which is based in both the UK and Kenya. The purpose is to give this company insight on the potential produce they wish to embark on.
+
 * The requirement is to look into which countries are Kenyas top trading partners. As countries like Mexico and South Africa have been in the running, is vital to know if Kenya is part of the running.
+
 * In addition, are export volumes and values increasing over time and how is the pricing per tonnne varying across the markets and years. This is worth looking into as although Kenya is now exporting Avocados, does it mean it's a sustanable country in the long run. 
+
 * In terms of future projective predictions, its worth looking at what is happening now and whether if Kenya can compete with the more seasoned players in the avocado exporting world or if this is a short term matter.
 
 
 
 ## Hypothesis and how to validate?
-###  *Hypothesis 1* vehicle and engine size are the primary drivers of car pricing:
-* This will be validated via linear regression models to display the R-Squared values and P-values of length, width, height and engine size. With this we can identify how strong the model is with the R-squared values and how confident we are with the P-values.
-### *Hypothesis 2* Brand names have an impact on car pricing:
-* This will be validated using a bar chart to see the differences in pricing and car brand. We will then use a boxplot chart to identify the distribution of pricing within those brands to gain greater insights.
-### *Hypothesis 3* Drive wheel is a key differentiator in pricing strategy:
-* We will validate this by using a boxplot chart that shows the distribution of pricing across rear wheel, four wheel and front wheel drive. 
+
+The following hypotheses reflect the initial expectations and goals of the project. However, as the analysis progressed, the results challenged these assumptions, prompting a shift in direction and a refinement of the original hypotheses.
+Below, you will find my original hypothesis and then the new refined hypothesis shortly after that. This evolution highlights the power of data to reshape understanding; what started as a confident prediction turned into a more nuanced insight:
+
+
+###  *Original Hypothesis 1* Kenya’s avocado export value is increasing year over year:
+* Despite the fact that the Kenyan market for avocados is growing, the original hypothesis seemed quite vague due to the fact that the dataset findings were based on a year basis, just 2023 to be exact. Given that the avocado market is indeed growing, we still can't assume consistent year - on - year growth from a narrow dataset. This makes the analysis almost temperamental as change would be more ideal IF it had shown a monthly growth. The information given from the dataset might be oversimplified due to external factors like inflation, currency or market shocks. It is hard to tell. Not having monthly breakdowns as well as only having annual totals keeps a vague idea on what is to come for the avocado market in Kenya.
+
+
+Another point to add is the category ‘World’. Upon cleaning and using the data for visualisation, I noticed that the dataset had a category under ‘World’ that sat under the ‘Country’ column. This was another vague data point as it was too broad for analysis and very tedious to figure out what countries were under ‘world’. 
+
+At this point I had already added this into the Jupyter Notebook visualisation (see below) to show the client how vague this point was and that moving forward, the more advanced analysis on the Tableau visualisations wouldn’t need or miss out the finalisation of this analysis.
+
+
+![alt text](image.png)
+
+
+### *Original Hypothesis 2* Countries that import the most avocados from Kenya are also the ones paying the highest value:
+* This is another point of assumption as it assumes a direct relationship between volume and value. This doesn't work on a wide spectrum as it oversimplifies the fact that some countries buy more but pay less per unit. Just having that as a statement ignores unit pricing and doesn't distinguish between value per tonne vs total value. 
+
+
+It would be easy to say that this could have been the hypothesis for this section but it wouldn't be just as some countries pay more than others and still don't get the value of money compared to other countries. As you will see on the revised hypothesis further down, you will get an idea that just because a country is paying more, it doesn't equate to a higher quantity.
+
+
+The final point is this original hypothesis does not account for trade deals, distance or value-added processing that comes with the produce trading world nor does it factor localisation pricing. 
+
+
+### *Original Hypothesis 3* Kenya’s avocado export quantity is increasing annually:
+* This hypothesis is an interesting one because, yes, indeed it may be true, but again relies on time-series granularity which this dataset did not have. The pain point of this dataset is the fact that this one in particular was broken down annually, which is the main reason as to why we didn't get to explore certain angles. Temporal growth does not explain economic value or market behaviour.
+
+
 
 ## Hypothesis testing:
-All visualisations that test our hypotheses can be found in this [Dashboard](https://public.tableau.com/app/profile/kaori.ikarashi/viz/CarPriceAnalysis_17501618237170/Story1?publish=yes). 
+All visualisations that test our hypotheses can be found in this [Dashboard](https://public.tableau.com/app/profile/faiza.abdulqadir/viz/Kenyan_Avocado_Analysis/KenyanAvocadoExportsAnalysis?publish=yes) 
 
-### *Hypothesis 1* vehicle and engine size are the primary drivers of car pricing
-#### linear regression model:
-![alt text](image-3.png)
-
-*The R-Squared and P-Values are displayed in the tooltip of the dashboard visualisations* 
-#### Is car length a primary driver of car pricing?
+### * New Hypothesis 1* Some countries pay a significantly higher price per tonne for Kenyan avocados than others
+#### Chart 1 - Treemap:
+![Treemap](image-1.png)
 
 
-![car length hypothesis](image-1.png)
+*Strongly supported — treemap shows major price variation by country (e.g. Zimbabwe vs Netherlands), suggesting different pricing strategies or trade relationships.*
 
-With an R-Squared value of 0.46 we can see see that the car length linear regression model is a moderate fit and with a P-value of 0.0001 we can be highly confident in that relationship.
 
-#### Is car width a primary driver in car pricing?
-![car width hypothesis](image-2.png)
+* The focus is narrowed down more and focuses on `value per tonne` (unit price) and now offers a country - level comparison. This factors in that countries have their own tariffs and value- added prices which makes it common knowledge when it comes to different country currencies. 
 
-With an R-Squared value of 0.58 (rounded up to two decimal places) the model is an even better fit than car length and with P-Value of 0.0001 we can be highly confident in this finding.
 
-#### Is car height a primary driver in car pricing?
-![car height hypothesis](image-4.png)
-
-With a low R-Squared value of 0.01 and higher P-value of 0.089 we can see that there seems to be no meaningful relationship between car height and car pricing.
-
-#### Is Engine size a primary driver in car pricing?
-![Engine Size hypothesis](image-6.png)
-
-With high R-Squared value of 0.76 and a P-value of 0.0001 this factor is the best predictor for price, with an incredibly strong relationship. 
+* This new hypothesis also accounts for disparities in trade relationships (e.g. Zimbabwe vs Netherlands) which upon seeing the data, is unfortunate for Zimbabwe as they are paying more especially as we should factor in that they no longer trade in their local currency but in the US dollar due to the plummet on the Rhodesian Dollar before the new Dollar was introduced.
 
 #### Verdict:
-All factors except for car height are good predictors for car pricing, with engine size having the strongest correlation with price. We can accept the alternative hypothesis and reject the null hypothesis.
+We get to uncover premium-paying countries, which may point out more niche markets and better trade terms which is a plus for analysis. This way it shows Zimbabwe pays more per tonne, while Netherlands imports more but pays less per tonne.
 
-### *Hypothesis 2* Brand names have an impact on car pricing:
-![alt text](image-7.png)
 
-From the bar chart we can see that there is a relationship between branding and price, with brands such as Jaguar, Buick and Porsche having the highest median prices and brands such Honda and Chevrolet having the lowest.
-The boxplot shows us that the distribution within brand varies for example BMW has a large distance between lower and upper whiskers, Chevrolet having very little variation and Toyota having a large amount outliers (since we are using the median rather than mean the effect of those outliers will be minimal).
+### *New Hypothesis 2* The top avocado importers by quantity are not necessarily those paying the most per tonne:
+#### Chart 2 - Bar Chart:
+![Bar Chart](image-2.png)
 
+
+*Supported — bar chart (quantity) vs treemap (value per tonne) shows clear divergence; high-volume buyers don't always pay the most per tonne.*
+
+
+This hypothesis is more supported, as it gives a deep dive on the disparity between **bulk buyers** and **premium buyers**. This opens up a discussion on **value** VS **volume** as it shows more nuance and reflects more on real- world trade complexities. An interesting point to add is that The Netherlands have been big importers as they work with several international supermarket chains that operate worldwide making them the hub of importing avocados.
+
+#### Verdict:
+The Netherlands is a top importer by quantity but pays less per tonne. Whilst in contrast with Zimbabwe, they import less but at a higher value per unit.
+ 
+
+### *Hypothesis 3* There is a positive relationship between Kenya’s avocado export quantity and export value, but outliers exist:
+#### Chart 4 - Regressive Line (Quantity vs Value):
+![Regressive Line Chart](image-3.png)
+
+
+*Partially supported — regression line shows a clear positive trend, but the 'World' outlier skews the relationship slightly. Strong R² and p-value give this statistical credibility.*
+
+**P-value – Significance of the relationship (typically should be < 0.05)**
+
+
+**R² (R-squared) – Strength of the correlation (closer to 1 is strong)**
+
+
+This regressive chart tests the correlation between quantity and value, so this introduces regression analysis and clusters. The part that is a little skewed but also an important aspect as it shows `outliers` like ‘World’ totals. 
 
 
 #### Verdict:
-There seems to be a clear patten of brand names effecting price, thus we can reject the null hypothesis and accept the alternative hypothesis. 
+This shows that generally, more export quantity results in higher value which we have shown on previous hypothesis but ‘World’ is a major outlier, likely an aggregated or unmatched entry distorting the trend.
 
-### *Hypothesis 3* Drive wheel is a key differentiator in pricing strategy:
-![Drive Wheel Hypothesis](image-8.png)
-The boxplots show that rear wheel drive cars tend to be most expensive and 4 wheel drive and front wheel drive are fairly similar in price. Rear wheel drive has the most variation in distribution and both rear wheel and front wheel have outliers in the higher price point. 
-
-#### Verdict:
-Our hypothesis is correct that is a relationship between drive wheel and price, however this seems to only be true is so far as rear wheel drive cars tend to be more expensive. 
+### *BONUS HYPOTHESIS* Some countries contribute large export value through small quantities, suggesting niche or high-value markets:
 
 
+#### Emerging Insight (from combining Chart 1 & 3):
+
+
+This bonus insight is derived from comparing Chart 1 (value per tonne) with Chart 3 (total export value). This bonus shows the mismatch in volume vs impact and opens the discussion on premium pricing, trade efficiency and strategic partnerships.
+ 
 
 ## Project Plan
-The project board that aided in our planning and organisation can be found [here](https://github.com/users/Fazestar01/projects/4)
+The project board that aided in our planning and organisation can be found [here](https://github.com/users/Fazestar01/projects/7/views/1)
+
+
 ### High-Level Steps Taken
 
+
 **Angle Used**  
-This project investigates the key factors that influence car pricing in the U.S. market, focusing on how different factors shape value. The goal was to generate actionable insights that could support pricing strategy, competitive positioning, or product development for an automotive company entering the market.
+The point was to explore the agriculture world and what is happening in the world of produce. Knowing of a client, Globalwema, that is currently exporting avocados from Kenya and having an insight of the current situation and somewhat struggles they are facing in the agriculture world is a key point on this project. Currently Kenya is projected to grow year by year in avocaods as it is now becoming the top exporters for avocados in Africa, almost surpassing South- Africa, which have been the top exporters for avocados from Afrca in the last 15 years. So it only seemed right to get in front of that and support Globalwema to the growing market of avocados.
+
+
+I then used a dataset website under the world bank where I found insights on the 2023 avocado reports and data.
+
+The angle used is to analyse who the key drivers are when it comes to importing avocados from Kenya and how much is exported, also giving a feel on the volume and value.
 
 **Dataset Selection**  
-We selected the [Car Price Prediction dataset on Kaggle](https://www.kaggle.com/datasets/hellbuoy/car-price-prediction) for its wide coverage of useful variables — including brand, engine size, weight and more making it ideal for both statistical testing and visual storytelling.
+I selected the [Kenyan Avocado 2023 dataset on WITS](https://wits.worldbank.org/trade/comtrade/en/country/KEN/year/2023/tradeflow/Exports/partner/ALL/product/080440) for its reliability on the data giving the company that curated the data — including country, year, quantity making it ideal for both statistical testing and visual storytelling.
 
 **Planning & Analysis Flow**
-- Defined hypotheses (H1–H3) to guide exploratory work and support business-focused questions.
-- Performed descriptive analysis to explore distributions, spot outliers, and assess feature importance.
-- Conducted hypothesis testing using linear regression and data visualisations.
-- Built interactive visual dashboards in Tableau to present findings in a clear and engaging format.
+1. Problem Definition & Hypothesis Planning
+* The initial goal was to understand how Kenya’s avocado exports differ by country in terms of value, quantity and pricing.
+
+
+* Initially 3 hypotheses were developed which were later refined based on data limitations (e.g, lack of monthly/yearly data granularity)
+* Focus is shifted to country-level comparisons and statistical relationships instead.
+
+2. Data Acquisition & Cleaning
+* The data was soured from (WITS) 
+* Cleaned using Python (Pandas), including handling missing values, filtering out vague entries like 'World', and calculating unit price per tonne.
+
+
+3. Exploratory Data Analysis (EDA)
+* Conducted using Jupyter Notebook with Pandas, Seaborn and Plotly.
+* Visuals like bar charts, treemaps, boxplots and regression lines were used to test hypotheses and identify patterns.
+
+
+4. Hypothesis Testing 
+* Each hypothesis was tested through relevant visualisations or statistical analysis
+* Hypothesis 3 (correlation between quantity and value) was backed with regression analysis (p-value, R²). 
+
 
 **Data Cleaning**
-- Removed duplicates and handled missing/null values.
+- Missing null values.
 - Fix errors in the data.
-- Encode to variables to numeric if necessary.
+- Filtering out vague entries like ‘World’ and calculating unit price per tonne.
 
 ### Data Management Throughout the Project
 
