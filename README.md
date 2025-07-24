@@ -63,7 +63,7 @@ The final point is this original hypothesis does not account for trade deals, di
 ## Hypothesis testing:
 All visualisations that test our hypotheses can be found in this [Dashboard](https://public.tableau.com/app/profile/faiza.abdulqadir/viz/Kenyan_Avocado_Analysis/KenyanAvocadoExportsAnalysis?publish=yes) 
 
-### * New Hypothesis 1* Some countries pay a significantly higher price per tonne for Kenyan avocados than others
+### *New Hypothesis 1* Some countries pay a significantly higher price per tonne for Kenyan avocados than others
 #### Chart 1 - Treemap:
 ![Treemap](image-1.png)
 
@@ -172,87 +172,109 @@ I selected the [Kenyan Avocado 2023 dataset on WITS](https://wits.worldbank.org/
 
 | **Step**        | **Action**                                                                                                                                             |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Collection**  | Downloaded CSV file from Kaggle and stored it in a version-controlled GitHub repository for team collaboration.                                       |
-| **Processing**  | Used Python (Pandas) in Jupyter Notebook to clean and transform data, including formatting, encoding, and feature engineering.                         |
-| **Analysis**    | Performed EDA in both Jupyter and Tableau. Applied statistical methods suited such as linear regression.
-| **Interpretation** | Combined numeric/statistical insights (e.g., p-values) with Tableau dashboards to communicate findings through dynamic charts and annotated stories. |
+| **Collection**  | Downloaded the file which was originally a .xslx file from the WITS database website and once downloaded, it was converted into a CSV ready for cleaning.                                       |
+| **Processing**  | Used Python (Pandas) in Jupyter Notebook to clean and transform avocado export data, including column standardisation, filtering out vague 'World' entries, calculating price per tonne metrics, and preparing the dataset for Tableau visualisation.                        |
+| **Analysis**    | Conducted data exploration and analysis using both Jupyter Notebook and Tableau to uncover patterns and trends. Used statistical techniques like correlation analysis to test relationships between export quantity and trade value.
+| **Interpretation** | Created interactive Tableau dashboards with charts and explanations to present the data findings in an easy-to-understand visual format. |
 
 ---
 
 ### Rationale for Research Methodologies
 
-- **Hypothesis-Driven Approach:** We defined practical questions relevant to strategic decisions and tested them with appropriate statistical methods.
-- **Tableau Public for Storytelling:** Enabled the team to create highly interactive and filterable dashboards for accessible, intuitive data exploration.
-- **Python for Processing:** All cleaning and transformation were done in Python to ensure transparency, reproducibility, and modular processing.
+- **Used descriptive statistics & exploratory data analysis (EDA):** This was done to understand distribution, central tendencies and outliers in avocado export data.
+- **Applied Visual Analytics:** From Bar charts, Box plots, treemaps on Juypter Notebook and Tableau Public to spot country level patterns in export quantity and value. Tableau was also used to better communicate insights to non-technical audiences through engaging visual storytelling.
+- **Tested hypothesis 3 using linear regression:** This was to evaluate the statistical strength of the relationship between quantity and export valiue (back with p-value and R²).
+- **Adapted hypotheses based on data structure and granularity:** Which focused on available dimensions like country and total export volume/value rather than time.
+- **Removed or addressed vague categories (e.g., ‘World’):** This was to maintain clarity and focus on country- level analysis.
+- **Blended statistical analysis with data storytelling:** Which allowed for both quantitative evidence and intutive, human-readable narratives.
+
 
 
 ## The rationale to map the business requirements to the Data Visualisations
-#### Identify Key Drivers of Car Price Business Need: 
-Understanding which features most influence pricing to support pricing strategy or customer targeting
+#### Identify key markets and revenue drivers: 
+Understanding Kenya's avocado export performances and to identify key markets in order to inform strategic trade decisions and uncover economic opportunites.
 
-Viusalisation: 
-- Scatter plots of Engine Size and vehicle size vs Price
-- Box plots of Drive Wheel vs Price Rationale: These visuals make it easy to see trends and variation across technical specs. Outliers or clusters can suggest relationships worth exploring with statistical testing.
+### Viusalisation 1: Treemap of Kenya's Avocado Export Quantity by Country:
+Rationale:
+The treemap offers a clear, proportional view of which countries import the highest quantities from Kenya. This helps quickly identify key trade partners by volume and supports prioritisation of logistics or trade negotiations. It's also good to know for the client to have a feel on how pricing works in different countries.
 
-### Compare Brand Positioning in the Market Business Need:
-Evaluate how brands are priced in relation to each other to guide competitive analysis or partnership decisions.
+### Visualisation 2: Bar Chart of Top 10 Exporting Countries by Volume:
+Rationale:
+This visual gives a snapshot ranking of Kenya's leading export destinations. Its useful for comparative analysis across countries and also supports discussions around market focus or diversification.
 
-Visualisation: 
-- Bar charts showing Average Price by Brand
-- Box plots showing Price spread within each brand Rationale: Highlights both the average market position and the consistency or variation in pricing within a brand—key for brand strategy.
+### Visualisation 3: Packed Bubble Chart of Export Value by Country:
+Rationale:
+This visual maps out the economic value per country, helping identify markets where price per tonne may be higher.  Comparing this with the volumes on (Chart 1 or 2) helps identify high-value but low-volume markets, or vice versa. 
 
-### Assess Pricing Strategy Based on Drive wheel Configuration Business Need:
-Determine how drive wheel (FWD, RWD, 4WD) impacts perceived value or cost to align with customer preferences
+### Visualisation 4: Linear Regression (Export Quantity vs Export Value):
+Rationale:
+For this chart, it helps explore whether increased export volume leads to greater export value. Including p-value and R² which provides statistical strength to the relationship, guiding evidence-based decisions in export planning.
 
-Visualisation:
- - Box plots or grouped bar charts of Drive Wheel vs Price Rationale: These plots show how drive wheel types cluster at different price tiers, helping identify if pricing strategies align with drive wheel desirability.
-
-### Monitor Variability in Price Across Technical Specs Business Need:
-Understand how variability in engine size, weight, and dimensions affects pricing to spot inconsistent or misaligned pricing.
-
-Visualisation:
-- Line graphs or histograms for price distribution Rationale: Helps detect relationships between variables and whether price changes smoothly or erratically with technical attributes.
 
 ## Analysis techniques used
-* The ETL pipeline was done in a Jupyter notebook using pandas which can be found  [here](https://github.com/Fazestar01/Car-Price-Analysis/blob/main/jupyter_notebooks/car_price_investigations.ipynb). This allows a structured approach to data cleaning as you can see what you've done previously very clearly.
-* The data was not paticularly limiting, except it did not include what form of measurements it used. This however did not stop us identifying trends in the data. 
-* We used generative AI to resolve questions regarding dashboarding and git. 
+* The ETL pipeline was done in a Jupyter notebook using pandas which can be found  [here](https://github.com/Fazestar01/Avocado-Exports-from-Kenya/blob/main/jupyter_notebooks/kenyan-avocado-investigation.ipynb). This allowed a structure throughout the analysis and kept all coding and understanding in a seamless order. After having this first part done, it was easier to continue the more advanced analysis through Tableau Public.
+* The data was a tad limiting but did not stop me from being able to make a comprehensive analysis for a good enough overview on the Kenyan avocado landscape. The only push back was the 'World' outlier and having the dtaset set to an annual overview but this was soon resolved as it allowed for a better angled hypothesis from the ones before.
+* I used generative AI to resolve questions regarding dashboarding and git as well as any bug issues. 
 
 ## Ethical considerations
-* The dataset contains no sensitive information thus does not require anonymisation or other ethical steps.
+* The dataset contains no sensitive information  as its public information thus does not require anonymisation or other ethical steps.
 
 ## Dashboard Design
-*The Dashboard can be found [here](https://public.tableau.com/app/profile/kaori.ikarashi/viz/CarPriceAnalysis_17501618237170/Story1?publish=yes)*.
+*The Dashboard can be found [here](https://public.tableau.com/app/profile/faiza.abdulqadir/viz/Kenyan_Avocado_Analysis/KenyanAvocadoExportsAnalysis?publish=yes)*.
 ### Dashboard preparation:
-The car name consists of the brand and manufacturer, so it is grouped into manufacturer to make the visualisation less crowded.
+The data was at this point focused on volume and value. It was important to portray that throughout the dashboard and storytelling. 
 
-![dashboard image](image-9.png)
+**As mentioned before, the outlier for 'World' had to removed to give a more accurate overview.(see below)**
 
-We used a Tableau Story format to keep the dashboard uncluttered. Viewers can explore each hypothesis using the buttons at the top.
+![World excluded from list](image-4.png)
 
-![dahsboard image](image-10.png)
+I then proceeded to create a dashboard which was then later added to the Tableau Story. The reasoning behind this is I find creating a dasboard allows for better visual creation as apposed to the Tableau worksheet, which I tend to soley use to import and create grapth.
+
+Below is an example of how I would put together a dashboard, even if it doesn't make the cut, it gives me a great working ground to determine what works best.
+
+![Dashboard creation](image-6.png)
+
+I then used a Tableau Story format to keep the dashboard clean and easy to go through. Viewers can explore each hypothesis using the buttons at the top also with the title of the analysis.
+
+![Storyboard Viewer](image-7.png)
 
 ### Dashboard for hypothesis 1:
-![alt text](image-11.png)
+![Treemap](image-8.png)
 
-We used scatter plots to explore the relationship between vehicle size and price, adding trend lines to highlight which size factor has the most significant impact on pricing.
+The first chart was interesting to create as the initial plan was to create a bar or line chart. As I had mentioned before the issue was the fact that it lacked a more detailed time scale as this one only showed annual data. This is where the turning point was which then made room for the hypothesis to be based on `value per tonne` vs `country`.
 
-The second graph uses a dual-axis chart to compare curb weight and price by car brand, helping to reveal each brand’s weight–price profile.
+On the Treemap you will see the top 10 countries, for a more narrow analysis, on which country get exports from Kenya by tonne. 
 
-We added a Car Name filter, allowing viewers to focus on vehicles from a specific manufacturer quickly.
+Naturally as I was focusing on the top 10 countries, the filter was applied to make sure the focus was on the top 10 countries. 
 
-![dashboard image](image-12.png)
+I then Marked the section of `price per tonne` and `country` into colours and shapes to give a visual overview on which country did the mosgt to the least.
+
+![alt text](image-9.png)
+
+The final touch was the theme colours I used which will be different shades of Orange and a touch of Purple and Navy, thoughout this visualisation on Tableau.
+![alt text](image-10.png)
+
+Once, alll this was put together on the Worksheet and Dashboard, I was then able to add this final chart onto the Story Tableau board, this is now were I added text for a personable feel on what I got from this with the hypothesis as well as importantly, what chart or analysis I comparing chart 1 to. 
+As it shows, hypothesis 1 was strongly supported as I am showing `value` VS `volume` is a good analysis to start with.
+
+![Hypothesis 1](image-14.png)
+
+
 
 ### Dashboard for hypothesis 2:
-![dashboard image](image-14.png)
+![Bar Chart](image-11.png)
 
-We are exploring whether brand name affects car pricing.
-The first visualisation highlights which manufacturers tend to price their vehicles higher on average.
-The second graph illustrates the distribution of prices within each brand, enabling us to understand how consistent a company is with its pricing and identify brands with greater price variation.
+The bar chart was the easiest to figure out as it was the one that was closest to the original plan for the chart creation. The chart started off with all countries shown (expect 'world') but then became clear that showing the top 10 countries that import avocaods would be a better shot to explore. 
 
-To enhance interactivity, we added Carbody and Fueltype filters, allowing viewers to explore pricing patterns across different vehicle types and fuel categories.
+As I mentioned before, I tend to use the Worksheet Tableau area to create charts. Here I create the filters and insert what needs to be on the rows and columns.
+For this chart it was a lot simple with just the `export quantity` and the `country` used on the chart.
 
-![dashboard image](image-15.png)
+![alt text](image-12.png)
+
+The filter stays the same with the countries showing 'Top 10' but for this a cluster on the colour was added, to give a more diverse colour palette (e.g Netherland is Blue, Saudi Arabia is Green etc) to avoid the bar looking flat.
+
+![alt text](image-13.png)
+
 
 ### Dashboard for hypothesis 3:
 
@@ -288,8 +310,8 @@ To highlight that our team created this work, Datalicious, we added our logo to 
 ## Credits 
 
 * Code Institute Learning Management System modules on pandas and tableau
-* Microsoft co-pilot aid in code generation
-* Chat-GPT for questions regarding dashboarding in Tableau
+* Microsoft co-pilot to help in code generation and understanding 
+* Chat-GPT for questions regarding dashboarding in Tableau and technical issues
 * [Markdown Guide](https://www.markdownguide.org/)
 
 
@@ -299,6 +321,6 @@ To highlight that our team created this work, Datalicious, we added our logo to 
 
 
 ## Acknowledgements
-* A huge thank you to Mark, Emma, John, Spencer and Niel from Code institute for their hard work in tutoring us! And a thank you to Carlos who showed us how to add a back to the top button on markdown. 
+* A huge thank you to Emma, Mark, John, Spencer and Niel from Code Institute for their hard work in tutoring us and your patience. It's been a journey from learning to print `HELLO WORLD` to full on coding!
 
 [Back to top](#top)
