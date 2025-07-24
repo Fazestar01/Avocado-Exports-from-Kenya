@@ -2,7 +2,7 @@
 ### Data Analyst: [Faiza Abdulqadir](https://github.com/Fazestar01)
 **Avocado Exports from Kenya analysis** is a project focused on the ETL (Extract, Transform, Load) pipeline in Jupyter Notebook and visualisations in Tableau. The project examines Kenya's avocado export patterns, trading relationships, and market dynamics to assess competitiveness in the global avocado industry. 
 
-![Kenyan Avocado Analysis Banner](Avocado-Export-Banner.png)
+![Kenyan Avocado Analysis Banner](avocado_analysis_banner.png)
 
 ## Navigation
 * [Data Investigations](https://github.com/Fazestar01/Avocado-Exports-from-Kenya/blob/main/jupyter_notebooks/kenyan-avocado-investigation.ipynb)
@@ -15,15 +15,15 @@
 
 
 ## Business Requirements
-The avocado industry is growing at a rapid rate with increasing international markets. With that being said, Kenya is amoungst one of the new kids on the block when it comes to being an avocado exporter. 
+The avocado industry is growing at a rapid rate with increasing international markets. With that being said, Kenya is amongst one of the new kids on the block when it comes to being an avocado exporter. 
 
 * This is being carried out by an Agricultual Analyst for the exporting company, Globalwema which is based in both the UK and Kenya. The purpose is to give this company insight on the potential produce they wish to embark on.
 
-* The requirement is to look into which countries are Kenyas top trading partners. As countries like Mexico and South Africa have been in the running, is vital to know if Kenya is part of the running.
+* The requirement is to look into which countries are Kenyas top trading partners. As countries like Mexico and South Africa have been in the running, it is vital to know if Kenya is part of the running.
 
-* In addition, are export volumes and values increasing over time and how is the pricing per tonnne varying across the markets and years. This is worth looking into as although Kenya is now exporting Avocados, does it mean it's a sustanable country in the long run. 
+* In addition, are export volumes and values increasing over time and how is the pricing per tonne varying across the markets and years. This is worth looking into as although Kenya is now exporting avocados, does it mean it's a sustainable country in the long run. 
 
-* In terms of future projective predictions, its worth looking at what is happening now and whether if Kenya can compete with the more seasoned players in the avocado exporting world or if this is a short term matter.
+* In terms of future projective predictions, its worth looking at what is happening now and whether Kenya can compete with the more seasoned players in the avocado exporting world or if this is a short term matter.
 
 
 
@@ -130,7 +130,7 @@ The project board that aided in our planning and organisation can be found [here
 
 
 **Angle Used**  
-The point was to explore the agriculture world and what is happening in the world of produce. Knowing of a client, Globalwema, that is currently exporting avocados from Kenya and having an insight of the current situation and somewhat struggles they are facing in the agriculture world is a key point on this project. Currently Kenya is projected to grow year by year in avocaods as it is now becoming the top exporters for avocados in Africa, almost surpassing South- Africa, which have been the top exporters for avocados from Afrca in the last 15 years. So it only seemed right to get in front of that and support Globalwema to the growing market of avocados.
+The point was to explore the agriculture world and what is happening in the world of produce. Knowing of a client, Globalwema, that is currently exporting avocados from Kenya and having an insight of the current situation and somewhat struggles they are facing in the agriculture world is a key point on this project. Currently Kenya is projected to grow year by year in avocados as it is now becoming the top exporters for avocados in Africa, almost surpassing South- Africa, which have been the top exporters for avocados from Africa in the last 15 years. So it only seemed right to get in front of that and support Globalwema to the growing market of avocados.
 
 
 I then used a dataset website under the world bank where I found insights on the 2023 avocado reports and data.
@@ -149,7 +149,7 @@ I selected the [Kenyan Avocado 2023 dataset on WITS](https://wits.worldbank.org/
 * Focus is shifted to country-level comparisons and statistical relationships instead.
 
 2. Data Acquisition & Cleaning
-* The data was soured from (WITS) 
+* The data was sourced from (WITS) 
 * Cleaned using Python (Pandas), including handling missing values, filtering out vague entries like 'World', and calculating unit price per tonne.
 
 
@@ -194,7 +194,7 @@ I selected the [Kenyan Avocado 2023 dataset on WITS](https://wits.worldbank.org/
 #### Identify key markets and revenue drivers: 
 Understanding Kenya's avocado export performances and to identify key markets in order to inform strategic trade decisions and uncover economic opportunites.
 
-### Viusalisation 1: Treemap of Kenya's Avocado Export Quantity by Country:
+### Visulisation 1: Treemap of Kenya's Avocado Export Quantity by Country:
 Rationale:
 The treemap offers a clear, proportional view of which countries import the highest quantities from Kenya. This helps quickly identify key trade partners by volume and supports prioritisation of logistics or trade negotiations. It's also good to know for the client to have a feel on how pricing works in different countries.
 
@@ -213,7 +213,7 @@ For this chart, it helps explore whether increased export volume leads to greate
 
 ## Analysis techniques used
 * The ETL pipeline was done in a Jupyter notebook using pandas which can be found  [here](https://github.com/Fazestar01/Avocado-Exports-from-Kenya/blob/main/jupyter_notebooks/kenyan-avocado-investigation.ipynb). This allowed a structure throughout the analysis and kept all coding and understanding in a seamless order. After having this first part done, it was easier to continue the more advanced analysis through Tableau Public.
-* The data was a tad limiting but did not stop me from being able to make a comprehensive analysis for a good enough overview on the Kenyan avocado landscape. The only push back was the 'World' outlier and having the dtaset set to an annual overview but this was soon resolved as it allowed for a better angled hypothesis from the ones before.
+* The data was a tad limiting but did not stop me from being able to make a comprehensive analysis for a good enough overview on the Kenyan avocado landscape. The only push back was the 'World' outlier and having the dataset to an annual overview but this was soon resolved as it allowed for a better angled hypothesis from the ones before.
 * I used generative AI to resolve questions regarding dashboarding and git as well as any bug issues. 
 
 ## Ethical considerations
@@ -228,7 +228,7 @@ The data was at this point focused on volume and value. It was important to port
 
 ![World excluded from list](image-4.png)
 
-I then proceeded to create a dashboard which was then later added to the Tableau Story. The reasoning behind this is I find creating a dasboard allows for better visual creation as apposed to the Tableau worksheet, which I tend to soley use to import and create grapth.
+I then proceeded to create a dashboard which was then later added to the Tableau Story. The reasoning behind this is I find creating a dasboard allows for better visual creation as apposed to the Tableau worksheet, which I tend to soley use to import and create graph.
 
 Below is an example of how I would put together a dashboard, even if it doesn't make the cut, it gives me a great working ground to determine what works best.
 
@@ -247,7 +247,7 @@ On the Treemap you will see the top 10 countries, for a more narrow analysis, on
 
 Naturally as I was focusing on the top 10 countries, the filter was applied to make sure the focus was on the top 10 countries. 
 
-I then Marked the section of `price per tonne` and `country` into colours and shapes to give a visual overview on which country did the mosgt to the least.
+I then Marked the section of `price per tonne` and `country` into colours and shapes to give a visual overview on which country did the most to the least.
 
 ![alt text](image-9.png)
 
@@ -264,7 +264,7 @@ As it shows, hypothesis 1 was strongly supported as I am showing `value` VS `vol
 ### Dashboard for hypothesis 2:
 ![Bar Chart](image-11.png)
 
-The bar chart was the easiest to figure out as it was the one that was closest to the original plan for the chart creation. The chart started off with all countries shown (expect 'world') but then became clear that showing the top 10 countries that import avocaods would be a better shot to explore. 
+The bar chart was the easiest to figure out as it was the one that was closest to the original plan for the chart creation. The chart started off with all countries shown (expect 'world') but then became clear that showing the top 10 countries that import avocados would be a better shot to explore. 
 
 As I mentioned before, I tend to use the Worksheet Tableau area to create charts. Here I create the filters and insert what needs to be on the rows and columns.
 For this chart it was a lot simple with just the `export quantity` and the `country` used on the chart.
@@ -278,27 +278,52 @@ The filter stays the same with the countries showing 'Top 10' but for this a clu
 
 ### Dashboard for hypothesis 3:
 
-![dashboard](image-16.png)
+![Hypothesis 3](image-15.png)
 
-We are analysing whether drivewheel type affects car pricing.
+The third and final hypothesis also consisted of two grapths (just like hypothesis one). This graph is showing the regressive line chart along with the bar chart to compare and contrast the two in order for the hypotheis to be supported.
 
-A box plot is used to compare the price distribution across 4WD, FWD, and RWD vehicles.
-To enhance interactivity, we included the same Carbody and Fueltype filters as in Hypothesis 2, allowing viewers to explore pricing patterns in more detail.
+For the regression line chart, as I designed this on a separate worksheet which allowed me to add clusters, export values and country.
 
-### Our logo:
+For this grapth I created custom filters and categories in order to get a accurate p-value and r-squared reading. As you can see, clusters were added in order to show the variations in the graph regression lines and as well as the circle shaped dots that highlights the points and outlier (world).
 
-![alt text](image-18.png)
+As you can also see, is that the the 'detail' category was done under country, year and cluster. This was needed in order to create a more accurate reading for the numerical values.
 
-To highlight that our team created this work, Datalicious, we added our logo to the top of each page
+![filters](image-16.png)
+
+The Axis where labeled under `export quantity tonnes` vs `export value USD`
+
+Once this was done, it was time to analyse the numerical values of the chart in order to carry out a regressive analysis.
+
+As you can see to carry out regression lines, I needed to look into 'Trend Lines' to find the accurate readings.
+
+![regressive testing](image-18.png)
+
+Once the regression lines showed, it was now time to have a descriptive overview on the lines outcome to have a good idea on the accuracy.
+
+!![regression description](image-20.png)
+
+*Summary on reading:This regression model reveals a strong, statistically significant relationship between the quantity of Kenyan avocados exported and the total export value. With an R-squared of 0.99982 and a p-value < 0.0001, the model confirms that, in certain export clusters, increases in quantity are closely tied to increases in export revenue. However, this relationship is not consistent across all trading clusters, suggesting that other factors—such as pricing agreements or destination market conditions—may influence export value in some regions.* 📈
+
+### Banner created:
+
+![Banner creation](image-17.png)
+
+To add a creative touch to the readme and face of the project, I created a banner on Canva to show the nature of the project in one picture.
 
 
 
 ## Development Roadmap and issues faced
-* The types of measurements for things such as height, weight etc were not included, to resolve this we asked Copilot what it thought the most reasonable assumption of the measurements are.
-* One aspect of data cleaning was overlooked, 'VW' should have been changed to 'Volkswagen' in the Jupyter notebook. This was solved by using the 'groupby' function in Tableau to group VW under Volkswagen. 
-* We had struggles with git that were resolved with a mixture of co-pilot and help from our tutors.
-* Images couldn't be moved into an image folder without them being removed from github. That will be something we look more into for the next project.
+* Data sourcing & cleaning: I gathered export data from [WITS] and cleaned it in Python (removing nulls, standardising column names, and filtering out vague entries like 'World').
 
+* Visualisation building: I explored different chart types in Tableau and Python to match each hypothesis—adjusting visuals like switching from Year to Country due to dataset limitations.
+
+* Storytelling structure: I grouped charts logically into two main narrative threads (Charts 1 & 3 and Charts 2 & 4), then built a dashboard and story to clearly communicate insights.
+
+* The issues faced was Limited time data: The dataset only had one year, so I had to rethink time-based hypotheses and switch focus to countries instead.
+
+* "World" category distortion: The 'World' entry skewed the regression chart and other graphs—couldn’t remove it fully but worked around it visually and in the analysis.
+
+* Learning Tableau from scratch: As a beginner, formatting charts and dashboards took extra time, especially when trying to show statistical insights like regression lines.
 
 
 
